@@ -1,0 +1,750 @@
+{
+  "header" : {
+    "dataModelVersion" : "2"
+  },
+  "content" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "a400e070-93ed-3b3d-88ee-b6b0716f694b",
+        "name" : "PutSQL",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "08148814-026f-3f63-bff6-93aff4177f87",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "sql" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "125d8a47-b4f1-3d55-a5da-e7133074268a",
+        "name" : "ConvertJSONToSQL",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "1947dc33-439d-3b72-9c71-9644dd3a55e1",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "a260ecca-585a-37a9-9c57-7f99139ff794",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure", "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "a3c763c4-d16e-3f41-9fa8-b0a48c6bbe08",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "1947dc33-439d-3b72-9c71-9644dd3a55e1",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "b15ab401-d8d0-31fb-ae93-6bf24166f0a0",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "a400e070-93ed-3b3d-88ee-b6b0716f694b",
+        "name" : "PutSQL",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "a3c763c4-d16e-3f41-9fa8-b0a48c6bbe08",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "afe0d766-3d43-39ff-8a92-63fef0c9dd6d",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "82506942-c5ff-3dbf-9db1-7e550ae362c7",
+        "name" : "GetTwitter",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "1947dc33-439d-3b72-9c71-9644dd3a55e1",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "2066d204-0594-3cc8-8e4f-29330d8f99a7",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "9d33ff40-f5bf-316f-8c7c-c4ebdee9582b",
+        "name" : "AttributesToJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "9d33ff40-f5bf-316f-8c7c-c4ebdee9582b",
+        "name" : "AttributesToJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "5ece5ba8-01d6-3fa2-8ecd-080cab343f25",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "a3c763c4-d16e-3f41-9fa8-b0a48c6bbe08",
+        "name" : "EvaluateJsonPath",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "125d8a47-b4f1-3d55-a5da-e7133074268a",
+        "name" : "ConvertJSONToSQL",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "93fc0211-a4d7-3323-afbc-66c1f1469bd5",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "9d33ff40-f5bf-316f-8c7c-c4ebdee9582b",
+        "name" : "AttributesToJSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "1947dc33-439d-3b72-9c71-9644dd3a55e1",
+        "name" : "LogMessage",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "0f210efb-d439-351e-84d7-512bf345aaaa",
+      "labelIndex" : 1,
+      "name" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "original", "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+        "id" : "125d8a47-b4f1-3d55-a5da-e7133074268a",
+        "name" : "ConvertJSONToSQL",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "funnels" : [ ],
+    "identifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "name" : "Twitter Flow",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 320.0,
+      "y" : 816.0
+    },
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "funnels" : [ ],
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "6cb20cef-5408-3b56-8683-80d554d44e0e",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "name" : "Twitter Flow",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : -290.99998530573316,
+        "y" : 296.99997262383664
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "variables" : { }
+    } ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "success", "retry" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.11.4"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "a400e070-93ed-3b3d-88ee-b6b0716f694b",
+      "name" : "PutSQL",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 1253.0000146942668,
+        "y" : 584.9999726238366
+      },
+      "properties" : {
+        "Support Fragmented Transactions" : "true",
+        "Batch Size" : "100",
+        "Obtain Generated Keys" : "false",
+        "JDBC Connection Pool" : "d92b7b91-105a-3c78-968c-8b730969f13f",
+        "database-session-autocommit" : "false",
+        "rollback-on-failure" : "false"
+      },
+      "propertyDescriptors" : {
+        "Support Fragmented Transactions" : {
+          "displayName" : "Support Fragmented Transactions",
+          "identifiesControllerService" : false,
+          "name" : "Support Fragmented Transactions",
+          "sensitive" : false
+        },
+        "putsql-sql-statement" : {
+          "displayName" : "SQL Statement",
+          "identifiesControllerService" : false,
+          "name" : "putsql-sql-statement",
+          "sensitive" : false
+        },
+        "Transaction Timeout" : {
+          "displayName" : "Transaction Timeout",
+          "identifiesControllerService" : false,
+          "name" : "Transaction Timeout",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Obtain Generated Keys" : {
+          "displayName" : "Obtain Generated Keys",
+          "identifiesControllerService" : false,
+          "name" : "Obtain Generated Keys",
+          "sensitive" : false
+        },
+        "JDBC Connection Pool" : {
+          "displayName" : "JDBC Connection Pool",
+          "identifiesControllerService" : true,
+          "name" : "JDBC Connection Pool",
+          "sensitive" : false
+        },
+        "database-session-autocommit" : {
+          "displayName" : "Database Session AutoCommit",
+          "identifiesControllerService" : false,
+          "name" : "database-session-autocommit",
+          "sensitive" : false
+        },
+        "rollback-on-failure" : {
+          "displayName" : "Rollback On Failure",
+          "identifiesControllerService" : false,
+          "name" : "rollback-on-failure",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.PutSQL",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.11.4"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "a3c763c4-d16e-3f41-9fa8-b0a48c6bbe08",
+      "name" : "EvaluateJsonPath",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 93.00001469426684,
+        "y" : 136.99997262383664
+      },
+      "properties" : {
+        "Destination" : "flowfile-attribute",
+        "Return Type" : "auto-detect",
+        "created_at" : "$.created_at",
+        "Null Value Representation" : "empty string",
+        "text" : "$.text",
+        "id" : "$.id",
+        "Path Not Found Behavior" : "ignore"
+      },
+      "propertyDescriptors" : {
+        "Destination" : {
+          "displayName" : "Destination",
+          "identifiesControllerService" : false,
+          "name" : "Destination",
+          "sensitive" : false
+        },
+        "Return Type" : {
+          "displayName" : "Return Type",
+          "identifiesControllerService" : false,
+          "name" : "Return Type",
+          "sensitive" : false
+        },
+        "created_at" : {
+          "displayName" : "created_at",
+          "identifiesControllerService" : false,
+          "name" : "created_at",
+          "sensitive" : false
+        },
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
+          "identifiesControllerService" : false,
+          "name" : "Null Value Representation",
+          "sensitive" : false
+        },
+        "text" : {
+          "displayName" : "text",
+          "identifiesControllerService" : false,
+          "name" : "text",
+          "sensitive" : false
+        },
+        "id" : {
+          "displayName" : "id",
+          "identifiesControllerService" : false,
+          "name" : "id",
+          "sensitive" : false
+        },
+        "Path Not Found Behavior" : {
+          "displayName" : "Path Not Found Behavior",
+          "identifiesControllerService" : false,
+          "name" : "Path Not Found Behavior",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.11.4"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "125d8a47-b4f1-3d55-a5da-e7133074268a",
+      "name" : "ConvertJSONToSQL",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 893.0000146942668,
+        "y" : 256.99997262383664
+      },
+      "properties" : {
+        "table-schema-cache-size" : "100",
+        "Table Name" : "twitter",
+        "jts-sql-param-attr-prefix" : "sql",
+        "Schema Name" : "dbo",
+        "Unmatched Field Behavior" : "Ignore Unmatched Fields",
+        "Unmatched Column Behavior" : "Fail on Unmatched Columns",
+        "jts-quoted-identifiers" : "false",
+        "jts-quoted-table-identifiers" : "false",
+        "JDBC Connection Pool" : "d92b7b91-105a-3c78-968c-8b730969f13f",
+        "Translate Field Names" : "true",
+        "Statement Type" : "INSERT"
+      },
+      "propertyDescriptors" : {
+        "table-schema-cache-size" : {
+          "displayName" : "Table Schema Cache Size",
+          "identifiesControllerService" : false,
+          "name" : "table-schema-cache-size",
+          "sensitive" : false
+        },
+        "Table Name" : {
+          "displayName" : "Table Name",
+          "identifiesControllerService" : false,
+          "name" : "Table Name",
+          "sensitive" : false
+        },
+        "Catalog Name" : {
+          "displayName" : "Catalog Name",
+          "identifiesControllerService" : false,
+          "name" : "Catalog Name",
+          "sensitive" : false
+        },
+        "jts-sql-param-attr-prefix" : {
+          "displayName" : "SQL Parameter Attribute Prefix",
+          "identifiesControllerService" : false,
+          "name" : "jts-sql-param-attr-prefix",
+          "sensitive" : false
+        },
+        "Schema Name" : {
+          "displayName" : "Schema Name",
+          "identifiesControllerService" : false,
+          "name" : "Schema Name",
+          "sensitive" : false
+        },
+        "Unmatched Field Behavior" : {
+          "displayName" : "Unmatched Field Behavior",
+          "identifiesControllerService" : false,
+          "name" : "Unmatched Field Behavior",
+          "sensitive" : false
+        },
+        "Unmatched Column Behavior" : {
+          "displayName" : "Unmatched Column Behavior",
+          "identifiesControllerService" : false,
+          "name" : "Unmatched Column Behavior",
+          "sensitive" : false
+        },
+        "jts-quoted-identifiers" : {
+          "displayName" : "Quote Column Identifiers",
+          "identifiesControllerService" : false,
+          "name" : "jts-quoted-identifiers",
+          "sensitive" : false
+        },
+        "jts-quoted-table-identifiers" : {
+          "displayName" : "Quote Table Identifiers",
+          "identifiesControllerService" : false,
+          "name" : "jts-quoted-table-identifiers",
+          "sensitive" : false
+        },
+        "JDBC Connection Pool" : {
+          "displayName" : "JDBC Connection Pool",
+          "identifiesControllerService" : true,
+          "name" : "JDBC Connection Pool",
+          "sensitive" : false
+        },
+        "Update Keys" : {
+          "displayName" : "Update Keys",
+          "identifiesControllerService" : false,
+          "name" : "Update Keys",
+          "sensitive" : false
+        },
+        "Translate Field Names" : {
+          "displayName" : "Translate Field Names",
+          "identifiesControllerService" : false,
+          "name" : "Translate Field Names",
+          "sensitive" : false
+        },
+        "Statement Type" : {
+          "displayName" : "Statement Type",
+          "identifiesControllerService" : false,
+          "name" : "Statement Type",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ConvertJSONToSQL",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-social-media-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.11.4"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "82506942-c5ff-3dbf-9db1-7e550ae362c7",
+      "name" : "GetTwitter",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 93.00001469426684,
+        "y" : -135.00002737616336
+      },
+      "properties" : {
+        "max-client-error-retries" : "5",
+        "Languages" : "en",
+        "Twitter Endpoint" : "Filter Endpoint",
+        "Terms to Filter On" : "Rugby"
+      },
+      "propertyDescriptors" : {
+        "Consumer Key" : {
+          "displayName" : "Consumer Key",
+          "identifiesControllerService" : false,
+          "name" : "Consumer Key",
+          "sensitive" : true
+        },
+        "Consumer Secret" : {
+          "displayName" : "Consumer Secret",
+          "identifiesControllerService" : false,
+          "name" : "Consumer Secret",
+          "sensitive" : true
+        },
+        "Access Token" : {
+          "displayName" : "Access Token",
+          "identifiesControllerService" : false,
+          "name" : "Access Token",
+          "sensitive" : true
+        },
+        "max-client-error-retries" : {
+          "displayName" : "Max Client Error Retries",
+          "identifiesControllerService" : false,
+          "name" : "max-client-error-retries",
+          "sensitive" : false
+        },
+        "Languages" : {
+          "displayName" : "Languages",
+          "identifiesControllerService" : false,
+          "name" : "Languages",
+          "sensitive" : false
+        },
+        "IDs to Follow" : {
+          "displayName" : "IDs to Follow",
+          "identifiesControllerService" : false,
+          "name" : "IDs to Follow",
+          "sensitive" : false
+        },
+        "Twitter Endpoint" : {
+          "displayName" : "Twitter Endpoint",
+          "identifiesControllerService" : false,
+          "name" : "Twitter Endpoint",
+          "sensitive" : false
+        },
+        "Locations to Filter On" : {
+          "displayName" : "Locations to Filter On",
+          "identifiesControllerService" : false,
+          "name" : "Locations to Filter On",
+          "sensitive" : false
+        },
+        "Terms to Filter On" : {
+          "displayName" : "Terms to Filter On",
+          "identifiesControllerService" : false,
+          "name" : "Terms to Filter On",
+          "sensitive" : false
+        },
+        "Access Token Secret" : {
+          "displayName" : "Access Token Secret",
+          "identifiesControllerService" : false,
+          "name" : "Access Token Secret",
+          "sensitive" : true
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.twitter.GetTwitter",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.11.4"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "1947dc33-439d-3b72-9c71-9644dd3a55e1",
+      "name" : "LogMessage",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 301.00001469426684,
+        "y" : 384.99997262383664
+      },
+      "properties" : {
+        "log-level" : "info"
+      },
+      "propertyDescriptors" : {
+        "log-message" : {
+          "displayName" : "Log message",
+          "identifiesControllerService" : false,
+          "name" : "log-message",
+          "sensitive" : false
+        },
+        "log-level" : {
+          "displayName" : "Log Level",
+          "identifiesControllerService" : false,
+          "name" : "log-level",
+          "sensitive" : false
+        },
+        "log-prefix" : {
+          "displayName" : "Log prefix",
+          "identifiesControllerService" : false,
+          "name" : "log-prefix",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogMessage",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "1.11.4"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
+      "identifier" : "9d33ff40-f5bf-316f-8c7c-c4ebdee9582b",
+      "name" : "AttributesToJSON",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 749.0000146942668,
+        "y" : -55.00002737616336
+      },
+      "properties" : {
+        "Destination" : "flowfile-content",
+        "Null Value" : "false",
+        "Attributes List" : "created_at,id,text",
+        "Include Core Attributes" : "true"
+      },
+      "propertyDescriptors" : {
+        "attributes-to-json-regex" : {
+          "displayName" : "Attributes Regular Expression",
+          "identifiesControllerService" : false,
+          "name" : "attributes-to-json-regex",
+          "sensitive" : false
+        },
+        "Destination" : {
+          "displayName" : "Destination",
+          "identifiesControllerService" : false,
+          "name" : "Destination",
+          "sensitive" : false
+        },
+        "Null Value" : {
+          "displayName" : "Null Value",
+          "identifiesControllerService" : false,
+          "name" : "Null Value",
+          "sensitive" : false
+        },
+        "Attributes List" : {
+          "displayName" : "Attributes List",
+          "identifiesControllerService" : false,
+          "name" : "Attributes List",
+          "sensitive" : false
+        },
+        "Include Core Attributes" : {
+          "displayName" : "Include Core Attributes",
+          "identifiesControllerService" : false,
+          "name" : "Include Core Attributes",
+          "sensitive" : false
+        }
+      },
+      "runDurationMillis" : 0,
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.AttributesToJSON",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "variables" : { }
+  }
+}
