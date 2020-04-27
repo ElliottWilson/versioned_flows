@@ -230,8 +230,8 @@
     "name" : "Twitter Flow",
     "outputPorts" : [ ],
     "position" : {
-      "x" : 320.0,
-      "y" : 816.0
+      "x" : 1000.0,
+      "y" : 464.0
     },
     "processGroups" : [ ],
     "processors" : [ {
@@ -251,8 +251,8 @@
       "name" : "PutSQL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 1253.0000146942668,
-        "y" : 584.9999726238366
+        "x" : 888.0,
+        "y" : 520.0
       },
       "properties" : {
         "Support Fragmented Transactions" : "true",
@@ -414,8 +414,8 @@
       "name" : "ConvertJSONToSQL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 893.0000146942668,
-        "y" : 256.99997262383664
+        "x" : 760.0,
+        "y" : 240.0
       },
       "properties" : {
         "table-schema-cache-size" : "100",
@@ -627,8 +627,8 @@
       "name" : "LogMessage",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 301.00001469426684,
-        "y" : 384.99997262383664
+        "x" : 72.0,
+        "y" : 472.0
       },
       "properties" : {
         "log-level" : "info"
@@ -676,8 +676,8 @@
       "name" : "AttributesToJSON",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 749.0000146942668,
-        "y" : -55.00002737616336
+        "x" : 600.0,
+        "y" : -80.0
       },
       "properties" : {
         "Destination" : "flowfile-content",
