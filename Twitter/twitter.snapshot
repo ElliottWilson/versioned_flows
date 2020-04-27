@@ -233,27 +233,7 @@
       "x" : 320.0,
       "y" : 816.0
     },
-    "processGroups" : [ {
-      "comments" : "",
-      "componentType" : "PROCESS_GROUP",
-      "connections" : [ ],
-      "controllerServices" : [ ],
-      "funnels" : [ ],
-      "groupIdentifier" : "f42acf75-d515-3e62-b8a5-b12b990680c3",
-      "identifier" : "6cb20cef-5408-3b56-8683-80d554d44e0e",
-      "inputPorts" : [ ],
-      "labels" : [ ],
-      "name" : "Twitter Flow",
-      "outputPorts" : [ ],
-      "position" : {
-        "x" : -352.0,
-        "y" : 320.0
-      },
-      "processGroups" : [ ],
-      "processors" : [ ],
-      "remoteProcessGroups" : [ ],
-      "variables" : { }
-    } ],
+    "processGroups" : [ ],
     "processors" : [ {
       "autoTerminatedRelationships" : [ "success", "retry" ],
       "bulletinLevel" : "WARN",
